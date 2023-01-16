@@ -34,7 +34,6 @@
 
 <br />
 
-## Ui based on [Admin SB 2](https://github.com/startbootstrap/startbootstrap-sb-admin-2)
 
 ---
 
