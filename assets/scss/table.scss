@@ -1,0 +1,158 @@
+.tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  >button {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.edit,
+.copy,
+.delete {
+  padding: 5px;
+  border-radius: 4px;
+  background-color: $white;
+  color: $black;
+}
+
+.edit {
+  color: green;
+}
+
+.delete {
+  color: red;
+}
+
+
+.table {
+  width: 100%;
+  border: 1px solid $white;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: $br;
+  display: block;
+  overflow: hidden;
+
+
+  th,
+  tr,
+  td {
+    border: 1px solid $white;
+  }
+
+  tr {
+    th {
+      padding: 10px;
+    }
+
+    td {
+      padding: 10px;
+    }
+  }
+
+
+
+
+  textarea {
+    resize: none;
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+  }
+}
+
+.create {
+
+  padding: 10px 20px;
+  background-color: $green;
+  border-radius: $br;
+  transition: $tr;
+
+  &:hover {
+    background-color: darken($green, 10);
+  }
+}
+
+.access__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  span {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    border-radius: $br;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      color: $black;
+    }
+  }
+
+  input {
+    border-radius: $br;
+    padding: 8px 14px;
+  }
+}
+
+
+
+
+.foobar-enter-from {
+  opacity: 0;
+  transform: translateX(90px);
+}
+
+.foobar-enter-active,
+.foobar-leave-active {
+  transition: all 0.5s;
+}
+
+.foobar-enter,
+.foobar-leave-to {
+  opacity: 0;
+}
+
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  input {
+    width: 100%;
+    background: transparent;
+    text-align: center;
+    color: $white;
+  }
+
+  button {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: $fw-bold;
+    padding: 6px;
+
+    &:first-child {
+      left: 10%;
+    }
+
+    &:last-child {
+      right: 10%;
+    }
+  }
+}
