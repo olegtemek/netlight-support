@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Access {
+  site_id    Int    @id @default(autoincrement())
+  site_name  String
+  site_admin String
+  site_ftp   String
+  site_host  String
+}
+
+model Note {
+  id   Int    @id @default(autoincrement())
+  body String
+}
+
+model Status {
+  id     Int    @id @default(autoincrement())
+  domain String
+}
+
+model Support {
+  id     Int    @id @default(autoincrement())
+  domain String
+  name   String
+  number String
+  count  Int    @default(0)
+  date   String
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+}
